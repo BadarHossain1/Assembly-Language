@@ -39,3 +39,25 @@ main proc         ; Beginning of the main procedure
 main endp         ; End of main procedure
 
 end main          ; Mark the end of the program
+
+
+
+Input: You type characters → CPU gets ASCII values.
+
+Processing: You convert to numbers → perform math → convert back to ASCII.
+
+Output: You send ASCII to the screen → it displays as readable text.
+
+
+Step | Value in Register | Description
+User types '1' | AL = 49 | ASCII for '1'
+sub al, '0' | AL = 1 | Convert ASCII to number
+User types '3' | AL = 51 | ASCII for '3'
+sub al, '0' | AL = 3 | Convert ASCII to number
+add bl, ch | BL = 4 | Numeric addition
+add bl, '0' | BL = 52 | Convert number back to ASCII
+mov dl, bl + print | DL = 52 → '4' | ASCII value printed to screen
+
+
+'0' == what we write in the terminal which is the numeric value . 
+48 is the ASCII value of '0'.
